@@ -1,0 +1,29 @@
+// khai báo biến
+@import "./Helper/variables";
+// Khai báo hàm
+@import "./Helper/mixin";
+// khai báo reset
+
+@import "./Base/reset";
+// định dạng lại thư viện sử dụng
+@import "./Base/customize";
+
+@import "./Components/button";
+
+@import "./Layout/header";
+@import "./Layout/footer";
+@import "./Layout/backtotop";
+
+@import "./Layout/carousel";
+@import "./Layout/thecreative";
+@import "./Layout/skills";
+@import "./Layout/creative";
+@import "./Layout/team";
+@import "./Layout/pagepic";
+@import "./Layout/pagecontent";
+@import "./Layout/number";
+@import "./Layout/together";
+@import "./Layout/blog";
+@import "./Layout/banner";
+
+@import "./vendor/jquery";

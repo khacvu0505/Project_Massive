@@ -1,0 +1,66 @@
+.together{
+    background: url('/images/pattern-2.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin-bottom: 7px;
+    .together__icon{
+        padding: $pd-3 $pd-2;
+        .nav{
+            .nav-item{
+               margin-right: $mg-1;
+               padding: 0;
+                .nav-link{
+                    background: $color-icon;
+                    padding: $pd-8 $pd-7;
+                    position: relative;
+                    transition: all .5s;
+                    &::after{
+                        content: '';
+                        left: 42%;
+                        bottom: -8%;
+                        position: absolute;
+                        transform: rotate(45deg);
+                    }
+                    &:hover{
+                        background-color: $color-white-0; 
+                        &::after{
+                            @include after(20px,20px,$color-white-0);
+                            transition: all .7s;
+                        }
+                    }
+                    i{
+                        @include styleText($fs-icon,0,$color-black-2);
+                    }
+                   
+                }
+                .nav-link.active{
+                    background-color: $color-white-0 !important;
+                    &::after{
+                        @include after(20px,20px,$color-white-0);
+                    }
+                }
+
+            }
+        }
+        .together__content{
+            line-height: $light-height-3;
+            .together__items{
+                padding: $pd-2 0;
+                span{
+                    letter-spacing: $letter-spacing-4;
+                    @include styleText($fs-4, 0, $color-gray-0);
+                }
+                h2{
+                    margin-bottom: $mg-4;
+                    letter-spacing:  $letter-spacing-4;
+                    font-weight: $fw-normal;
+
+                }
+                p{ 
+                    color: $color-black-2;
+                }
+            }
+        }
+    }
+
+}

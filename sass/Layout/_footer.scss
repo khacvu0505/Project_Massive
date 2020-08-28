@@ -1,0 +1,102 @@
+.footer{
+    .footer__content{
+        background-color: $color-black-4;
+        padding: $pd-7 0;
+        .footer__item{
+            padding: 0 30px;
+            img{
+                @include after(112px,100px,0);
+                cursor: pointer;
+            }
+            p{
+                margin-top: $mg-1;
+                color: $color-gray-0;
+                line-height: $light-height-3;
+            }
+            h5{
+                @include styleText($fs-4,0, $color-white-0);
+                margin-bottom: $mg-0;
+                letter-spacing: $letter-spacing-0;
+            }
+            ul{
+                padding: 0;
+                li{
+                    border-bottom: 1px solid $color-black-0;
+                    list-style: none;
+                   
+                    &:hover{
+                        i,a{
+                            color: $color-yellow-0;
+                        }
+                       
+                    }
+                    i{
+                        color: $color-gray-8;
+                        padding-right: $pd-4; 
+                        transition: all .5s;
+                    }
+                    a{ 
+                        text-decoration: none;
+                        color: $color-gray-8;
+                        line-height: $light-height-4;
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+        .pic{
+            ul{
+                padding: 0 $pd-4;
+                    a{
+                        margin: 0 $mg-5 $mg-5 0;
+                        img{
+                            @include after(55px,55px,0);
+                            margin-bottom: $mg-5;
+                        }
+                    }
+            }
+        }
+    }
+    .footer__bottom{
+        display: inline-block;
+        width: 100%;
+        padding: $pd-6 0;
+        border-top: 1px solid #2c2c2c;
+        background: $color-black-5;
+        font-weight: $fw-normal;
+        align-items: center;
+        .footer__intro{
+           
+           p{
+               margin-top: $mg-5;
+               color: $color-gray-9;
+               a{
+                   color: $color-white-0;
+                   transition: all .5s;
+                   &:hover{
+                       color: $color-yellow-0;
+                       text-decoration: none;
+                   }
+               }
+           } 
+        }
+        .footer__icon{
+            text-align: right;
+            i{
+                @include after(38px,39px,0);
+                text-align: center;
+                border: 1px solid $color-gray-12;
+                border-radius: 50%;
+                line-height: 38px;
+                margin: 0 0 0 $mg-3;
+                @include styleText( $fs-8,0,$color-gray-12);
+                transition: all .5s;
+                &:hover{
+                    color: $color-white-0;
+                    border: 1px solid transparent;
+                    background: $color-gray-12;
+                }
+            }
+        }
+    }
+}

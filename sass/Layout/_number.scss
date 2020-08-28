@@ -1,0 +1,31 @@
+.number{
+    background-color: $color-black-5;
+    padding: $pd-3 0;
+    color: $color-white-0;
+    .number__content{
+        .number__item{
+            text-align: center;
+            padding: 0 $pd-2;
+            .number__info{
+                i{
+                    display: inline-block;
+                    padding-right: $pd-1;
+                    font-size: $fs-icon;
+                } 
+                h2{
+                    display: inline-block;
+                    margin-bottom: $mg-5;
+                    font-size: $fs-icon;
+                    letter-spacing: $letter-spacing-4;
+                    line-height: $light-height-0;
+                    width: 20%;
+                   
+                }
+            }
+            p{
+                letter-spacing: $letter-spacing-0;
+            }
+
+        }
+    }
+}

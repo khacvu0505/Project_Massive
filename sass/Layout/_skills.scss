@@ -1,0 +1,87 @@
+.skills{
+    background: url('/images/4.jpg');
+    @include background(100%);
+    position: relative;
+    padding: $pd-3 0;
+    @include reponsiveMax('medium800'){
+        .skill__title{
+            h3{
+                font-size: $fs-7 !important;
+            }
+        }
+        .dark__overlay{
+            visibility: hidden;
+        }
+        padding: 0px 0px $pd-3;   
+    }
+    .skill__title{
+        display: table;
+        @include after(100%,400px,0); 
+        vertical-align: middle;
+      h3{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: $letter-spacing-2;
+        @include styleText($fs-9,0,$color-white-0);
+      }  
+    }
+    .dark__overlay{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include after(50%,100%,$color-black-blog);
+      
+    }
+    .skill__content{
+        padding: 0 60px;
+        color: $color-white-0;
+        h4{
+            letter-spacing: $letter-spacing-0 +1;
+            margin: 0 0 $mg-0 0;
+            font-size: $fs-7;
+        }
+        p{
+            margin: 0 0 $mg-0;
+            line-height: $light-height-2 + 5;
+        }
+        .bar{
+            padding-top: $pd-2;
+            .progress{
+                background: $color-gray-1;
+                height: $fs-8;
+                letter-spacing: $letter-spacing-0;
+                border-radius: 0;
+                margin-bottom: $mg-1;
+                .progress-bar{
+                    color: $color-black-4;
+                    background: $color-white-0;
+                    text-align: left;
+                    padding-left: $pd-4; 
+                }     
+            }
+            .percent{
+                width: 0%;
+                text-align: right;
+                transition:  all .6s;
+                margin-bottom: ($mg-3)-10;
+                span{
+                    background: $color-gray-2;
+                    padding: 4px ($fs-1)-2;
+                    border-radius: $fs-1;
+                    position: relative;
+                    @include styleText( $fs-1,0,$color-black-4);
+                    &::after{
+                        content: '';
+                        left: 50%;
+                        bottom: -8%;
+                        position: absolute;
+                        @include after(3px,3px,$color-gray-2);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}

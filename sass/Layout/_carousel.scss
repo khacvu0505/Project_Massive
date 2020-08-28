@@ -1,0 +1,29 @@
+.carousell{
+    background: url('/images/index-banner-2.jpg') no-repeat;
+    @include background(754px);
+    position: relative;
+    .carousel__content{
+        position: absolute;
+        @extend %center; 
+        text-align: center;
+        h1{
+            @include styleText($fs-h1,$fw-1,$color-white-0);  
+            letter-spacing: $letter-spacing-1;
+            line-height: $light-height-1;
+            display: inline;
+        }
+        h4{
+            @include styleText($fs-8,$fw-normal,$color-white-0);  
+            letter-spacing: $letter-spacing-2;
+        }
+        @include reponsiveMax("small"){
+            h1{
+                font-size: $fs-11;
+            }
+            h4{
+                font-size: $fs-7;
+            }
+        }
+       
+    }
+}

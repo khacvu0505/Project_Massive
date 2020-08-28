@@ -1,0 +1,16 @@
+.pagePic{
+    border-top: 1px solid #eeeeee;
+    .page__content{
+        justify-content: space-around;
+        padding: $pd-3 $pd-2;
+        img{
+            @include after(145px, 110px,0);
+        }
+        .owl-nav{
+            display: none;
+        }
+        .owl-dot{
+            outline: none;
+        }
+    }
+}

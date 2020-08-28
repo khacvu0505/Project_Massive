@@ -1,0 +1,19 @@
+.banner{
+    background: url('/images/8\ \(1\).jpg') no-repeat;
+    @include background(470px);
+    padding: $pd-3 0;
+    p{
+        letter-spacing: 3px;
+        font-size: 16px;
+        color: $color-yellow-0;
+    }
+    h1{
+        @include reponsiveMax('medium'){
+            font-size: $fs-12;
+        }
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        font-weight: normal;
+        color: $color-white-0;
+    }
+}

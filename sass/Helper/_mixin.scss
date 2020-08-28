@@ -1,0 +1,98 @@
+@mixin styleText($fs,$fw,$color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+} 
+@mixin after($width,$height,$bg){
+    width: $width;
+    height: $height;
+    background-color: $bg;
+}
+@mixin background($height){
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: $height;
+}
+%positionAbso{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+%center{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+%contenth3{
+    @include styleText($fs-9,$fw-normal,$color-black-0);
+    letter-spacing: $letter-spacing-0 +1;
+    margin:$mg-1 0;
+    padding-bottom: $pd-4;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: '';
+        left: 50%;
+        bottom: -1px;
+        display: block;
+        @include after($fs-h1,2px, $color-black-1);
+        margin-left: -($mg-0)-1; 
+    }  
+}
+%contentp{
+    width: 60%;
+    display: inline-block;
+    margin: 0 auto;
+    color: $color-gray-0;
+    line-height: $light-height-2;
+}
+%button{
+    padding: $pd-4 $pd-2;
+    color: $color-white-0;
+    background: $color-black-4;
+    border-radius:0;
+    transition:  all .3s;
+    letter-spacing: $letter-spacing-0;
+}
+@mixin reponsiveMax($screen){
+     // map: duyệt mảng
+     @if map-has-key($map: $breakpoints, $key:$screen) {
+        $value:map-get($map: $breakpoints,$key:$screen);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }@else{
+        @warn "Không tìm thấy!";
+    }
+}
+@mixin reponsiveMin($screen){
+    // map: duyệt mảng
+    @if map-has-key($map: $breakpoints, $key:$screen) {
+       $value:map-get($map: $breakpoints,$key:$screen);
+       @media screen and (min-width:$value){
+           @content;
+       }
+   }@else{
+       @warn "Không tìm thấy!";
+   }
+}
+@mixin between-sizes ($lower, $upper) {
+    //Kiểm tra breakpoint truyền vào có tồn tại như bạn đã định nghĩa hay không.
+    @if map-has-key($breakpoints, $lower ) and map-has-key($breakpoints, $upper) {
+        // Lấy giá trị pixel breakpoint đó
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+
+        //Build media query tự động
+        @media screen and (min-width: $lower-breakpoint) and (max-width: $upper-breakpoint) {
+            @content;
+        }
+    }
+    @else {
+        //Build media query tự động
+        @media screen and (min-width: $lower) and (max-width: $upper) {
+            @content;
+        }
+    }
+}

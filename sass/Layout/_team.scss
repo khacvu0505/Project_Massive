@@ -1,0 +1,159 @@
+.team{
+    .team__title{
+        padding: $pd-3 0;
+        .team__name{
+            @extend %contenth3;
+        }
+        p{
+            @extend %contentp;
+        }
+    }
+    .team__content{
+        @include reponsiveMax("large"){
+            .team__items{
+                .team__hover{
+                    .team__info{
+                        top: 15% !important;
+                        h4{
+                            font-size: $fs-6 !important;
+                        }
+                        p{
+                            font-size: $fs-5 !important;
+                        }
+                      
+                    }
+                    .team__icon{
+                        bottom: 10% !important;
+                        a{
+                            margin: 0 $mg-3;
+                            i{
+                                font-size: $fs-7 !important; 
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+        .team__items{
+            padding: 0 $pd-2;
+            margin: $pd-5 0;
+            &:hover{
+                .team__hover{
+                    opacity: 1;
+                    .team__info{
+                        transform: translateY(30%);
+                        opacity: 1;
+                    }
+                    .team__icon{
+                        opacity: 1;
+                        transform: translateY(-90%);
+                    }
+                }
+            }
+            .team__img{
+                    position: relative;
+                img{
+                    width: 100%;
+                }
+                .team__intro{
+                    position: absolute;
+                    right: 0;
+                    bottom: $pd-2;
+                    @include after(70%,normal,$color-black-intro);
+                    padding: $pd-1 $pd-5;
+                    text-align: right;
+                    text-transform: uppercase;
+                    letter-spacing: $letter-spacing-4;
+                    h5{
+                        margin-bottom: 0;
+                        @include styleText($fs-4,$fw-normal,$color-white-0);
+                        
+                    }
+                    p{
+                        margin-bottom: 0;
+                        @include styleText($fs-2,$fw-normal,$color-info);
+                    }
+                }
+            }
+            .team__hover{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: all .3s;
+                opacity: 0;
+                border: $fs-8 solid $color-black-hover;
+                background-color: $color-image-hover;
+                margin: 0 $mg-0;
+                .team__info{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    padding: 0 $pd-1;
+                    transition: all .5s;
+                    transform: translateY(-55%);
+                    opacity: 0;
+                    text-align: center;
+                    
+                    h4{
+                        margin-bottom: ($mg-1) +5;
+                        @include styleText($fs-4,$fw-normal,$color-black-4);
+                        letter-spacing: $letter-spacing-3;
+                        text-transform: uppercase;
+                    }
+                    p{
+                        @include styleText($fs-4,$fw-normal,$color-gray-0);
+                        margin-bottom: 0;
+                        line-height: $light-height-3;
+                        
+                    }
+                }
+                .team__icon{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    transition: all .5s;
+                    transform: translateY(45%);
+                    text-align: center;
+                    opacity: 0;
+                    a{
+                        margin: 0 $mg-5; 
+                        i{
+                            transition: all .3s;
+                            @include styleText($fs-6,$fw-normal,$color-black-4);
+                            &:hover{
+                                color: $color-yellow-0;
+                            }
+                        } 
+                        
+                    }
+
+                }
+            }
+        }
+    }
+    .team__joinClub{
+        background: $color-gray-4;
+        margin: $pd-3 $mg-3;
+        padding: $pd-6;
+        .joinClub__info{
+            h4{
+                @include styleText($fs-7,$fw-normal,$color-black-0);
+                letter-spacing: $letter-spacing-0;
+                line-height: $light-height-0;
+                span{
+                    color: $color-yellow-0;
+                }
+            }
+            p{
+                margin-top: $mg-5;
+                color: $color-gray-0;
+                margin-bottom: 0;
+            }
+           
+        }
+       
+    }
+}

@@ -1,0 +1,21 @@
+/* backtotop */
+.backtotop{
+    visibility: hidden;
+    opacity: 0;
+    i{
+        @include styleText($fs-7,0, $color-white-0);
+        @include after(40px,40px, $color-black-4);
+        line-height: 40px;
+        text-align: center;
+        position: fixed;
+        bottom: $pd-2;
+        right: $pd-2;  
+    }  
+}
+.cd-top--is-visible{
+    visibility: visible;
+    opacity: 1;
+  }
+.cd-top--fade-out {
+    opacity: .7;
+}  

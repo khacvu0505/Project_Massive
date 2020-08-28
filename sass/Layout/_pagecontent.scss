@@ -1,0 +1,43 @@
+.pageContent{
+    padding: $pd-3 0;
+    ol{
+        margin: 0;
+        bottom: -60px;
+        li{
+            @include after(12px,12px,$color-gray-dot);
+            border-radius: 50%; 
+            margin: 0 7px;
+        }
+    }
+    .pageContent_intro{
+        width: 62%;
+        margin: 0px auto;
+        .pageContent__item{
+            text-align: center;
+            img{
+                border-radius: 50%;
+                margin-bottom: $mg-1;
+            }
+            p{
+                @include styleText($fs-6,0,$color-gray-0);
+                font-style: italic;
+                line-height: $light-height-3;
+                margin: 0 0 $mg-0;
+            }
+            h5{
+                margin:$mg-5 0;
+                letter-spacing: $letter-spacing-4;
+                text-transform: uppercase;
+                @include styleText($fs-4,0,$color-black-4);
+            }
+            span{
+                display: block;
+                letter-spacing: $letter-spacing-4;
+                text-transform: uppercase;
+                @include styleText($fs-2,0,$color-gray-13);
+            }
+        }
+    }
+    
+   
+}
